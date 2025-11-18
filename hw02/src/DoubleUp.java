@@ -7,7 +7,7 @@ public class DoubleUp {
       String res = new String();
       for (int i = 0; i < s.length(); i++){
          for (int j = 0; j < 2; j++){
-            res = res.concat(String.valueOf(s.charAt(i)));
+            res = res + s.charAt(i);
          }
       }
       return res;
