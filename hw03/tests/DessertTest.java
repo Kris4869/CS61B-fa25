@@ -1,3 +1,5 @@
+package com.kris;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -24,7 +26,7 @@ public class DessertTest {
 
     private static Class<?> loadDessertClass() {
         try {
-            return Class.forName("Dessert");
+            return Class.forName("com.kris.Dessert");
         } catch (ClassNotFoundException e) {
             fail("Expected a class named Dessert, but it was not found on the classpath.");
             return null; // unreachable
