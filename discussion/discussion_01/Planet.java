@@ -3,22 +3,22 @@ import java.util.List;
 
 public class Planet {
     // static variable
-    static List<Planet> L = new ArrayList<>();
+    private static List<Planet> allPlanets = new ArrayList<>();
 
     // instance variable
-    double x,y;
-    String name;
+    private double x,y;
+    private String name;
 
     // constructor
     public Planet(double x, double y, String name){
         this.x = x;
         this.y = y;
         this.name = name;
-        L.add(this);
+        allPlanets.add(this);
     }
 
     public static List<Planet> allPlanetsCreated(){
-        return L;
+        return allPlanets;
     }
 
     // Fill-in-the blank (however, I this way below is not so efficient)
@@ -26,12 +26,12 @@ public class Planet {
         double max = 0;
         for (Planet P : planets){
             for (Planet other : planets){
-                if ((Math.pow(p.x - other.x, 2) + Math.pow(P.y - other.y,2)) > max){
-                    max = Math.pow(p.x - other.x, 2) + Math.pow(P.y - other.y,2);
+                if (P.distanceTo(other) > max){
+                    max = P.distanceTo(other);
                 }
             }
         }
-        return Math.sqrt(max);
+        return max;
     }
 
     public double distanceTo(Planet other){
@@ -42,6 +42,6 @@ public class Planet {
 
 
     public static void main(String[] args) {
-        
+        System.out.println("test");
     }
 }
