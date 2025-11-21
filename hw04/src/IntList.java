@@ -163,7 +163,7 @@ public class IntList {
             p.rest = new IntList(x, null);
             return;
         }
-        IntList(p.rest,x);
+        addLast(p.rest,x);
     }
 
     /**
@@ -191,9 +191,11 @@ public class IntList {
         IntList L = new IntList(5, null);
         L.rest = new IntList(7,null);
         L.rest.rest = new IntList(9, null);
+        L.addLast(13);
 
-        IntList M = incrIterativeDestructive(L, 3);
-        System.out.println(L.get(0));
+        // IntList M = incrIterativeDestructive(L, 3);
+        System.out.println(L.get(3));
+        System.out.println(L.sum());
         // System.out.println(M.first);
         // System.out.println(M.rest.first);
         // System.out.println(M.rest.rest.first);
