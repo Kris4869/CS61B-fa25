@@ -165,7 +165,6 @@ public class IntList {
         }
         addLast(p.rest,x);
     }
-
     /**
      * Destructively adds x to the end of the list.
      */
