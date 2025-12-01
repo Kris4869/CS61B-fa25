@@ -1,4 +1,4 @@
-package com.kris;
+// package com.kris;
 public class ArrayExercises {
     /** Returns the second to last item in the given array.
      *  Assumes the array has at least 2 elements. */

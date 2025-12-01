@@ -1,4 +1,4 @@
-package adventure;
+package com.kris;
 
 public class AdventureUtils {
 

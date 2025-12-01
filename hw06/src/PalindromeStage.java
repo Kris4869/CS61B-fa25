@@ -1,4 +1,4 @@
-package adventure;
+package com.kris;
 
 import common.IntList;
 import edu.princeton.cs.algs4.In;
@@ -64,7 +64,8 @@ public class PalindromeStage implements AdventureStage {
     /** Returns a new IntList with the contents of the original IntList in reverse order.*/
     private static IntList reverseList(IntList l) {
         IntList reversed = null;
-        while (l.rest != null) {
+        // modified codes from l.rest != null" to "l != null"
+        while (l != null) {
             reversed = new IntList(l.first, reversed);
             l = l.rest;
         }
@@ -77,8 +78,9 @@ public class PalindromeStage implements AdventureStage {
      */
     private static IntList digitsToIntList(String s) {
         int[] a = new int[s.length()];
-        for (int i = s.length(); i > 0; i++) {
-            a[s.length() - i] = Character.getNumericValue(s.charAt(i));
+        // modified codes from "++" to "--"; from "s.charAt(i)" to "s.charAt(s.length() - i)"
+        for (int i = s.length(); i > 0; i--) {
+            a[s.length() - i] = Character.getNumericValue(s.charAt(s.length() - i));
         }
         return IntList.of(a);
     }

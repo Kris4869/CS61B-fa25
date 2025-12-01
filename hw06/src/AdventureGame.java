@@ -1,4 +1,4 @@
-package adventure;
+package com.kris;
 
 import edu.princeton.cs.algs4.In;
 

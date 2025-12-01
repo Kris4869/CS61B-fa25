@@ -1,4 +1,4 @@
-package adventure;
+package com.kris;
 
 import java.util.HashMap;
 import java.util.Map;

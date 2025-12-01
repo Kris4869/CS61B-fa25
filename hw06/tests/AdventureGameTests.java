@@ -1,4 +1,4 @@
-package adventure;
+package com.kris;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdRandom;
@@ -8,6 +8,13 @@ import org.junit.jupiter.api.Named;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+
+// import com.kris.AdventureGame;
+// import com.kris.AdventureStage;
+// import com.kris.BeeCountingStage;
+// import com.kris.MachineStage;
+// import com.kris.PalindromeStage;
+// import com.kris.SpeciesListStage;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;

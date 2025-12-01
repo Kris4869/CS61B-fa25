@@ -1,11 +1,12 @@
-package adventure;
+package com.kris;
 
 import edu.princeton.cs.algs4.In;
 
+import static com.kris.AdventureUtils.isInt;
+
 import java.util.Map;
 import java.util.TreeMap;
-
-import static adventure.AdventureUtils.isInt;
+import java.util.concurrent.Flow.Subscriber;
 
 public class MachineStage implements AdventureStage {
     private final In in;
@@ -81,10 +82,15 @@ public class MachineStage implements AdventureStage {
      * Returns the maximum integer between a and b.
      */
     public static int mysteryMax(int a, int b) {
-        int w = (b - a) >> 31;
-        int z = ~(b - a) >> 31;
+        // int w = (b - a) >> 31;
+        // int z = ~(b - a) >> 31;
 
-        int max = b & w | a & z;
+        // int max = b & w | a & z;
+
+        int max = a;
+        if (max < b){
+            return b;
+        }
         return max;
     }
 
@@ -132,7 +138,8 @@ public class MachineStage implements AdventureStage {
         int i = 0;
         int sum = 0;
         while (i < x.length) {
-            sum = sum + mysteryAdd(sum, x[i]);
+            // sum = sum + mysteryAdd(sum, x[i]);
+            sum = sum + x[i];
             i = i + 1;
         }
         return sum;
@@ -148,4 +155,13 @@ public class MachineStage implements AdventureStage {
         int sumofMaxes = arraySum(maxes);
         return sumofMaxes;
     }
+
+    public static void main(String[] args) {
+        int[] a = new int[]{1, -10, 3};
+        int[] b = new int[]{0, 20, 5};
+        int x = sumOfElementwiseMax(a, b);
+        System.out.println(x);
+    }
 }
+
+
